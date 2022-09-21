@@ -4,29 +4,15 @@ import { MediaElem } from '../src/MediaElem.js';
 import '../src/media-elem.js';
 
 describe('MediaElem', () => {
-  it('has a default title "Hey there" and counter 5', async () => {
+  it('has a default title "Test Title"', async () => {
     const el = await fixture<MediaElem>(html`<media-elem></media-elem>`);
 
-    expect(el.title).to.equal('Hey there');
-    expect(el.counter).to.equal(5);
-  });
-
-  it('increases the counter on button click', async () => {
-    const el = await fixture<MediaElem>(html`<media-elem></media-elem>`);
-    el.shadowRoot!.querySelector('button')!.click();
-
-    expect(el.counter).to.equal(6);
+    expect(el.title).to.equal('Test Title');
   });
 
   it('can override the title via attribute', async () => {
     const el = await fixture<MediaElem>(html`<media-elem title="attribute title"></media-elem>`);
 
     expect(el.title).to.equal('attribute title');
-  });
-
-  it('passes the a11y audit', async () => {
-    const el = await fixture<MediaElem>(html`<media-elem></media-elem>`);
-
-    await expect(el).shadowDom.to.be.accessible();
   });
 });
