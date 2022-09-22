@@ -99,3 +99,5 @@ $ npm run build
 1. More automation test case for high coverage score
 
 2. Push into npm repository for client usage. 
+
+3. Design pipeline for CI/CD.
