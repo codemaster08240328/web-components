@@ -3,16 +3,27 @@
 This webcomponent follows the [open-wc](https://github.com/open-wc/open-wc) recommendation.
 
 ## Installation
+> This doesn't work for now. Need to push package into npm repository first.
+```bash
+npm i web-components
+```
+
+## Linking for Local development
+```bash
+$ npm link
+```
+
+Then, go to target repository
 
 ```bash
-npm i media-elem
+$ npm link web-components
 ```
 
 ## Usage
 
 ```html
 <script type="module">
-  import 'media-elem/media-elem.js';
+  import 'web-components/media-elem.js';
 </script>
 
 <media-elem></media-elem>
@@ -74,3 +85,17 @@ npm start
 ```
 
 To run a local development server that serves the basic demo located in `demo/index.html`
+
+## Local contribution.
+1. Update `media-elem` or add more web components inside `src`. 
+2. Add your components into `storybook`.
+3. Build package first before pushing or linking for usage.
+```bash
+$ npm run build
+```
+
+
+## What can be improved more
+1. More automation test case for high coverage score
+
+2. Push into npm repository for client usage. 
