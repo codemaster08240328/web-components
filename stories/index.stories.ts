@@ -7,6 +7,7 @@ export default {
   argTypes: {
     title: { control: 'text' },
     description: { control: 'text' },
+    img: { control: 'text' },
   },
 };
 
@@ -19,16 +20,15 @@ interface Story<T> {
 interface ArgTypes {
   title?: string;
   description?: string;
+  img?: string;
 }
 
 const Template: Story<ArgTypes> = ({
   title = 'Test Title',
   description = 'this is description',
+  img = 'https://www.popsci.com/uploads/2020/06/05/3NIEQB3SFVCMNHH6MHZ42FO6PA.jpg',
 }: ArgTypes) => html`
-  <media-elem
-    .title=${title}
-    .description=${description}
-  >
+  <media-elem .title=${title} .description=${description} .img=${img}>
   </media-elem>
 `;
 

@@ -17,5 +17,8 @@
     "declaration": true,
     "incremental": true
   },
-  "include": ["**/*.ts"]
+  "include": ["**/*.ts"],
+  "rules": {
+    "no-unused-vars": "off"
+  }
 }
